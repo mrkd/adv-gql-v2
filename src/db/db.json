@@ -1,15 +1,33 @@
 {
   "users": [
     {
-      "email": "member@member.com",
-      "password": "password",
+      "email": "mark2@marknorgren.com",
+      "password": "mark",
       "role": "ADMIN",
       "verified": false,
       "avatar": "http",
-      "createdAt": 1571213104370,
-      "id": "Z2hlvDmLOSRZGebC_Z_aA"
+      "createdAt": 1571251539847,
+      "id": "x7pJdvGy6Jaxx8IJ7SSfN"
+    },
+    {
+      "email": "mark3@marknorgren.com",
+      "password": "mark",
+      "role": "ADMIN",
+      "verified": false,
+      "avatar": "http",
+      "createdAt": 1571251795134,
+      "id": "QVDVMkZvhvSDNZeA9G4oz"
     }
   ],
   "posts": [],
-  "settings": []
+  "settings": [
+    {
+      "user": "x7pJdvGy6Jaxx8IJ7SSfN",
+      "theme": "LIGHT",
+      "emailNotifications": true,
+      "pushNotifications": true,
+      "createdAt": 1571205141021,
+      "id": "1rokGsQR1KC5gPf6L4ap3"
+    }
+  ]
 }

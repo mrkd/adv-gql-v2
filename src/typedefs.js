@@ -1,6 +1,7 @@
 const gql = require('graphql-tag')
 
 module.exports = gql`
+  directive @formatDate(format: String = "yyyy-MMM-dd'T'H:m:s.SSS") on FIELD_DEFINITION
   enum Theme {
     DARK
     LIGHT
@@ -17,7 +18,7 @@ module.exports = gql`
     email: String!
     avatar: String!
     verified: Boolean!
-    createdAt: String!
+    createdAt: String! @formatDate
     posts: [Post]!
     role: Role!
     settings: Settings!
@@ -99,6 +100,10 @@ module.exports = gql`
     invite(input: InviteInput!): Invite!
     signup(input: SignupInput!): AuthUser!
     signin(input: SigninInput!): AuthUser!
+  }
+
+  type Subscription {
+    newPost: Post
   }
 
 `
