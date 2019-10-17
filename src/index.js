@@ -5,6 +5,8 @@ const {createToken, getUserFromToken} = require('./auth')
 const db = require('./db')
 const {FormatDateDirective} = require('./directives')
 
+const port = process.env.APPPORT || 4000;
+
 const server = new ApolloServer({
   typeDefs,
   resolvers,
@@ -39,7 +41,7 @@ const server = new ApolloServer({
   }
 })
 
-server.listen(4000).then(({url, subscriptionsUrl}) => {
+server.listen( {port: port }).then(({url, subscriptionsUrl}) => {
   console.log(`🚀 Server ready at ${url}`)
   console.log(`🚀 Subscriptions ready at ${subscriptionsUrl}`)
 })
